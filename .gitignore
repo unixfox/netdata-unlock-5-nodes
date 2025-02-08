@@ -41,3 +41,4 @@ Untitled*.ipynb
 /.ms-playwright
 
 .env.example
+netdata-unlock-5-nodes
