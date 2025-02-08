@@ -1,0 +1,11 @@
+{
+  "tasks": {
+    "dev": "deno run --allow-net --allow-env --allow-read=.env --watch main.ts",
+    "run": "deno run --allow-net --allow-env --allow-read=.env main.ts",
+    "compile": "deno compile --allow-net --allow-env --allow-read=.env main.ts"
+  },
+  "imports": {
+    "hono": "jsr:@hono/hono@^4.6.5",
+    "hono/proxy": "jsr:@hono/hono@^4.6.5/proxy"
+  }
+}
