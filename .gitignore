@@ -40,5 +40,5 @@ Untitled*.ipynb
 # playwright browser binary cache
 /.ms-playwright
 
-.env.example
+.env
 netdata-unlock-5-nodes
