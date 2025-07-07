@@ -6,6 +6,12 @@ Basically, in the endpoint that limit the number of nodes that can be used. It r
 
 This allows to choose more than 5 nodes or any node that you want in your dashboard.
 
+# Prerequisites
+
+Make sure to select at least 5 nodes in the nodes selector in the netdata web interface. Otherwise, the program will not work.
+
+Reported in https://github.com/unixfox/netdata-unlock-5-nodes/issues/3
+
 # How to run
 
 ## Using the command line
