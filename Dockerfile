@@ -1,4 +1,4 @@
-FROM denoland/deno:alpine-2.9
+FROM denoland/deno:alpine-2.9.2
 
 RUN apk add --no-cache tini
 
@@ -8,7 +8,7 @@ RUN addgroup --gid 10001 --system app \
 WORKDIR /app
 
 ENV DENO_DIR=/deno-dir
-RUN mkdir /deno-dir
+RUN mkdir -p /deno-dir
 
 COPY deno.json deno.lock main.ts ./
 RUN deno cache main.ts \
