@@ -1,14 +1,22 @@
-FROM denoland/deno:alpine
+FROM denoland/deno:alpine-2.9
+
+RUN apk add --no-cache tini
+
+RUN addgroup --gid 10001 --system app \
+ && adduser --uid 10000 --system --ingroup app --home /home/app app
 
 WORKDIR /app
 
+ENV DENO_DIR=/deno-dir
+RUN mkdir /deno-dir
+
 COPY deno.json deno.lock main.ts ./
+RUN deno cache main.ts \
+ && chown -R 10000:10001 /deno-dir /app
 
-RUN deno install --entrypoint main.ts
-
-RUN addgroup -S app && adduser -S app -G app
 USER app
 
 EXPOSE 8000
 
-CMD ["deno", "run", "--allow-net", "--allow-env", "--allow-read=.env", "main.ts"]
+ENTRYPOINT ["/sbin/tini", "--", "deno"]
+CMD ["run", "--allow-net", "--allow-env", "--allow-read=.env", "main.ts"]
