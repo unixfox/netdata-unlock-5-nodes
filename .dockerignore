@@ -1,0 +1,6 @@
+.env
+.git
+.gitignore
+.env.example
+README.md
+netdata-unlock-5-nodes
