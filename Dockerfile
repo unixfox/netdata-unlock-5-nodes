@@ -1,4 +1,4 @@
-FROM denoland/deno:alpine-2.9.4
+FROM denoland/deno:alpine-2.9.5
 
 RUN apk add --no-cache tini
 
