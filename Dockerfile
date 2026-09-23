@@ -1,4 +1,4 @@
-FROM docker.io/denoland/deno:alpine-2.9.6
+FROM docker.io/denoland/deno:alpine-2.9.7
 
 RUN apk add --no-cache tini
 
