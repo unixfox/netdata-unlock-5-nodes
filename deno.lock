@@ -1,12 +1,12 @@
 {
   "version": "5",
   "specifiers": {
-    "jsr:@hono/hono@^4.13.8": "4.13.8",
+    "jsr:@hono/hono@^4.13.9": "4.13.11",
     "jsr:@std/dotenv@*": "0.225.7"
   },
   "jsr": {
-    "@hono/hono@4.13.8": {
-      "integrity": "bbb566d9ebb81e74c0d7eeff1f9221ba9f3fda6f1832e5ca66cbddcecb2f7fec"
+    "@hono/hono@4.13.11": {
+      "integrity": "ac38e87b77af00e28602f112fe6770f9451697600a447ba18dbe05efd1520378"
     },
     "@std/dotenv@0.225.3": {
       "integrity": "a95e5b812c27b0854c52acbae215856d9cce9d4bbf774d938c51d212711e8d4a"
@@ -17,7 +17,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@hono/hono@^4.13.8"
+      "jsr:@hono/hono@^4.13.9"
     ]
   }
 }
